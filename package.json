@@ -1,0 +1,28 @@
+{
+  "name": "richard-jr",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npx gh-pages -d build -t true",
+    "postdeploy": "rm -rf build"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^2.0.2",
+    "@sveltejs/kit": "^1.22.3",
+    "@tsconfig/svelte": "^4.0.1",
+    "svelte": "^4.1.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.3"
+  },
+  "dependencies": {
+    "@codemirror/lang-html": "^6.4.4",
+    "@codemirror/state": "^6.2.1",
+    "@codemirror/view": "^6.17.1",
+    "microback": "github:barabari-project/microback",
+    "sass": "^1.66.1",
+    "svelte-preprocess": "^5.0.4",
+    "sveltemirror": "^1.0.0"
+  }
+}

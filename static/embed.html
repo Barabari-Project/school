@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedding Tester</title>
+
+  <link rel="stylesheet" href="https://manav.ch/atomic.css">
+
+  <style>
+    iframe {
+      width: calc(100vw - 40px - 6px);
+      height: calc(100vh - 40px - 6px);
+    }
+  </style>
+</head>
+
+<body class="tc">
+  <h1>Embedding Test</h1>
+  <iframe class="m20 rx20" src="/" frameborder="0"></iframe>
+
+  <script>
+    // message iframe
+    const iframe = document.querySelector( 'iframe' )
+    const content = iframe.contentWindow;
+
+    // post message frame
+    const code = `<html><h1> Embedded </h1></html>`;
+
+    setTimeout( () => {
+      content.postMessage( { type: 'code', code }, '*' )
+    }, 1000 )
+  </script>
+</body>
+
+</html>

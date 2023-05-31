@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+font-size="300" font-family="helvetica" font-weight="100" text-rendering="geometricPrecision" viewBox="0 0 663 300">
+  <rect width="100%" height="100%" rx="10" fill="#349"/>
+  <path fill="#fc3" d="m129 42 8-10a11 11 0 0 1 19 6v11c0 7 3 13 7 18l43 40c24 23 38 56 38 89 0 49-39 88-87 88h-9c-53 0-96-43-96-96v-2c0-25 10-48 27-65l2-2c2-2 5-4 8-4 6 1 11 6 11 12v45a32 32 0 0 0 64 0v-2c0-9-4-18-10-24l-19-20a64 64 0 0 1-6-84z"/>
+	<text x="240" y="270" fill="#fc3">lite</text>
+</svg>
