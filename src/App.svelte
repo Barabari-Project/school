@@ -1,23 +1,34 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import CodeMirror from "svelte-codemirror-editor";
   import { html } from "@codemirror/lang-html";
+  import Template from "./basic.html?raw";
+  import { onMount } from "svelte";
 
-  let frame;
-  let value = `<h1>Hello World</h1>`;
-  onMount(() => {});
+  let //
+    frame,
+    value = Template,
+    old,
+    doc;
 
-  let old;
+  const write = (text) => {
+    doc.open();
+    doc.write(text);
+    doc.close();
+  };
+
   const handleChange = () => {
     const current = value;
     if (old === current) return 0;
 
     old = current;
-    const doc = frame.contentWindow.document;
-    doc.open();
-    doc.write(current);
-    doc.close();
+    write(current);
   };
+
+  onMount(() => {
+    if (!doc) doc = frame.contentWindow.document;
+
+    write(Template);
+  });
 </script>
 
 <main class="f fw">
@@ -57,6 +68,7 @@
     width: 50%;
     height: 100%;
     background: #ccc;
+    overflow-y: scroll;
   }
 
   @media (max-width: 768px) {
@@ -65,5 +77,9 @@
       width: 100%;
       height: 50%;
     }
+  }
+
+  iframe {
+    background: #eee;
   }
 </style>
