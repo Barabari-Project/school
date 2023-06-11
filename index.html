@@ -5,14 +5,40 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + Svelte + TS</title>
 
-  <link rel="stylesheet" href="/atomic.css">
+  <meta name="description" content="A REPL for School Students by The Barabari Project" />
+  <meta name="author" content="The Barabari Project" />
+
+  <meta property="og:title" content="Barabari REPL | Richard Jr." />
+  <meta property="og:description" content="A REPL for School Students by The Barabari Project" />
+  <meta property="og:image" content="/icon.svg" />
+
+  <meta name="twitter:title" content="Barabari REPL | Richard Jr." />
+  <meta name="twitter:description" content="A REPL for School Students by The Barabari Project" />
+  <meta name="twitter:image" content="/icon.svg" />
+
+  <link rel="stylesheet" href="https://manav.ch/atomic.css">
+
+  <title>Barabari REPL | Richard Jr.</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .codemirror-wrapper {
+      overflow-y: hidden;
+    }
+
+    .cm-scroller {
+      overflow: auto;
+      min-height: 90vh
+    }
+  </style>
+  <script type="module" src="/src/main.ts"></script>
 </head>
 
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
-</body>
+<body></body>
 
 </html>
