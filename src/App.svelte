@@ -29,7 +29,27 @@
 
     write(Template);
   });
+
+  // is iframe
+  const isTop = () => {
+    try {
+      return window.top === window.self;
+    } catch (e) {
+      return false;
+    }
+  };
+
+  const handleMessage = ({ data }) => {
+    if (isTop()) return 0; // ignore if !embeded
+    if (data.type !== "code") return 0; // ignore if not code
+
+    const { code } = data;
+    value = code;
+    write(code);
+  };
 </script>
+
+<svelte:window on:message={handleMessage} />
 
 <main class="f fw">
   <div class="editor">
@@ -47,13 +67,7 @@
       on:change={handleChange}
     />
   </div>
-  <iframe
-    id="mfWHAT"
-    src="#"
-    bind:this={frame}
-    frameborder="0"
-    title="Editor Output"
-  />
+  <iframe id="mfWHAT" bind:this={frame} frameborder="0" title="Editor Output" />
 </main>
 
 <style>
