@@ -64,6 +64,7 @@
 
 <body class="reveal">
   <iframe class="p-abs" src="/" frameborder="0"></iframe>
+  <img src="/bbi.png" height="64px" width="64px" class="p-fix o-50" alt="bbi logo" style="bottom: 10px; left: 10px;">
   <main class="slides">
     <!-- SLIDE 1 -->
     <section data-auto-animate>
@@ -83,21 +84,18 @@
       <div class="f j-ar">
         <div class="w-33 p-abs tl" style="left:-7%;">
           <p class="p10">
-            <b><code>&lt;html&gt;</code></b>: This is like the main container for the webpage. It holds all
-            the
-            content that we want to show.
+            <b><code>&lt;html&gt;</code></b>: This represents the root of the webpage. "If present" it tells
+            the computer that everything inside this tag is a webpage
           </p>
           <br />
           <p class="p10">
-            <b><code>&lt;body&gt;</code></b>: This is where we put all the things that we want to show on the
-            webpage.
-            The computer reads this part and displays it on the screen.
+            <b><code>&lt;body&gt;</code></b>: This represents the main content. While there can be multiple
+            main contents, it's best to have only one
           </p>
           <br />
           <p class="p10">
             <b><code>&lt;h1&gt;</code></b>: This is the biggest heading on the webpage. It tells us the main
-            title,
-            which is "Virat Kohli"
+            title, which is "Virat Kohli"
           </p>
         </div>
       </div>
@@ -123,8 +121,7 @@
           </p>
           <br />
           <p class="p10">
-            <b><code>&lt;p&gt;</code></b>: These are like paragraphs of text that tell us information about Virat Kohli.
-            It's like a story that explains who he is and what he has achieved
+            <b><code>&lt;p&gt;</code></b>: These are paragraphs of text that tell us information about Virat Kohli
           </p>
         </div>
       </div>
@@ -143,14 +140,13 @@
       <div class="f j-ar">
         <div class="w-33 p-abs tl" style="left:-7%;">
           <p class="p10">
-            <b><code>&lt;ul&gt;</code></b>: This is a list where we can put some important points. Each point is
-            marked with a dot, and we call it a "bullet point". In this case, it lists some of Virat Kohli's career
-            achievements.
+            <b><code>&lt;ul&gt;</code></b>: This is a list of items in which order doesn't matter. For example,
+            here we've listed some of Virat Kohli's achievements
           </p>
           <br />
           <p class="p10">
-            <b><code>&lt;li&gt;</code></b>: These are the individual bullet points inside the list. Each point
-            represents something special that Virat Kohli has achieved.
+            <b><code>&lt;li&gt;</code></b>: These are the individual items in <i>any</i> list (ordered or unordered)
+            which may text, images or even other lists
           </p>
         </div>
       </div>
@@ -226,23 +222,21 @@
         <div class="w-33 p-abs tl" style="left:-7%;">
           <p class="p10">
             <b><code>&lt;style&gt;</code></b>: This is where we can add some styling to our webpage. We can change the
-            font, background color, and text color etc of our webpage.
+            fonts, colours, layout etc of our webpage.
           </p>
           <br />
           <p class="p10">
             <b><code>h1 {}</code></b>: This part is about styling a specific type of heading, the <i>h1</i> heading.
-            It's like
-            giving special instructions just for the big and important headings on the page
+            Where the <b>{}</b> contain all the rules h1 will follow
           </p>
           <br />
           <p class="p10">
-            <b><code>background-color:white</code></b>: This is like picking the colour of the background of the
-            webpage. It says that the background color of the whole webpage should be white
+            <b><code>background-color:black</code></b>: Changes the background colour of the h1 heading to black since
+            it's inside the h1's <b>{}</b>
           </p>
           <br />
           <p class="p10">
-            <b><code>color:white</code></b>: This says that the text color inside the h1 heading should be white. Since
-            the background is black, using white text makes it easy to read
+            <b><code>color:white</code></b>: Same as background we set the TEXT colour to white
           </p>
         </div>
       </div>
@@ -251,17 +245,41 @@
     <section data-auto-animate show>
       <div class="f j-ar">
         <div class="w-33 p-abs tl" style="left:-7%;">
-          <p class="p10">
-            <b><code>text-align:center</code></b>: This is about how the text inside the h1 heading is aligned. It
-            says that the text
-            should be centered, which means it will be in the middle of the heading and look neat
+          <p class="p10 tl" style="border: 1px solid #000;">
+            <b><code>text-align: left</code></b>: Aligns text ALLLLLL the way to the left
           </p>
           <br />
+          <p class="p10 tc" style="border: 1px solid #000;">
+            <b><code>text-align: center</code></b>: Aligns text to the center <b>&rarr;</b>
+          </p>
+          <br />
+          <p class="p10 tr" style="border: 1px solid #000;">
+            <b><code>text-align: right</code></b>: Aligns text to the right (where Americans drive)
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDE 10 -->
+    <section data-auto-animate show>
+      <div class="f j-ar">
+        <div class="w-33 p-abs tl" style="left:-7%;">
+          <p class="p10 tl" style="font-family: Times;font-size:1.1em;">
+            <b><code>font-family: Times</code></b>: Change what the font looks like for fancier styles
+          </p>
+          <br />
+          <p class="p10 tl" style="font-family: 'Brush Script MT (cursive)';">
+            <b><code>font-family: 'Brush Script MT (cursive)'</code></b>: If the font name has spaces in it, then you
+            need to put it in quotes
+          </p>
+          <br />
+          <p class="p10 tl" style="font-family: Arial;">
+            <b><code>font-family: Roboto, Arial</code></b>: Checks if you have Roboto installed, if not then it uses
+            Arial
+          </p>
         </div>
       </div>
     </section>
   </main>
-
 
   <script>
     const iframeCont = document.querySelector( 'iframe' );
