@@ -4,67 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>WebDev Saksharta | Class 8 | Barabari Project</title>
+
+  <meta name="description"
+    content="Learn the basics of web development with The Barabari Project. This is targetted at class 8 students for Saksharta. We'll be making a fanpage for Virat Kohli using HTML and CSS.">
+
+  <meta property="og:title" content="WebDev Saksharta | Class 8 | Barabari Project" />
+  <meta property="og:description"
+    content="Learn the basics of web development with The Barabari Project. This is targetted at class 8 students for Saksharta. We'll be making a fanpage for Virat Kohli using HTML and CSS." />
+  <meta property="og:image" content="https://i.imgur.com/5HMzk3U.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@BarabariProject" />
+  <meta name="twitter:title" content="WebDev Saksharta | Class 8 | Barabari Project" />
+  <meta name="twitter:description"
+    content="Learn the basics of web development with The Barabari Project. This is targetted at class 8 students for Saksharta. We'll be making a fanpage for Virat Kohli using HTML and CSS." />
+  <meta name="twitter:image" content="https://i.imgur.com/5HMzk3U.png" />
+
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="/bbi.png" />
+  <link rel="apple-touch-icon" href="/bbi.png" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://manav.ch/atomic.css">
-
-  <style>
-    iframe {
-      top: 50%;
-      transform: translateY(-50%);
-      border: 3px solid #000;
-      border-radius: 10px;
-      z-index: 1000 !important;
-
-      aspect-ratio: 16/9;
-      width: 66vw;
-    }
-
-    iframe {
-      pointer-events: none;
-      opacity: 0;
-      right: -50%;
-      transition: all 0.5s ease-in-out;
-    }
-
-    iframe.show {
-      pointer-events: all;
-      opacity: 1;
-      right: 20px;
-    }
-
-    iframe.editorMax {
-      right: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      transform: unset;
-      border-radius: 0;
-    }
-
-    section {
-      z-index: 1;
-    }
-
-    h2 {
-      font-size: 1.5em !important;
-    }
-
-    .fw7,
-    b,
-    strong {
-      font-weight: 700 !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/demo.css">
 </head>
 
 <body class="reveal">
-  <iframe class="p-abs" src="/" frameborder="0"></iframe>
-  <img src="/bbi.png" height="64px" width="64px" class="p-fix o-50" alt="bbi logo" style="bottom: 10px; left: 10px;">
+  <iframe class="p-abs" src="/" title="CodeEditor" frameborder="0"></iframe>
   <main class="slides">
     <!-- SLIDE 1 -->
     <section data-auto-animate>
@@ -280,55 +250,7 @@
       </div>
     </section>
   </main>
-
-  <script>
-    const iframeCont = document.querySelector( 'iframe' );
-    const iframe = iframeCont.contentWindow;
-    const addIds = document
-      .querySelectorAll( 'section' )
-      .forEach( ( section, index ) => {
-        if ( !section.id ) section.id = index;
-      } );
-
-    function send ( code ) {
-      iframe.postMessage( { type: 'code', code }, '*' )
-    };
-
-
-    let current, sub, div;
-    Reveal.initialize( {
-      history: true
-    } );
-    Reveal.addEventListener( 'slidechanged', ( e ) => {
-      current = e.indexh;
-      sub = e.indexv;
-      div = e.currentSlide;
-
-      const showEditor = div.getAttribute( 'show' ) !== null;
-      const maxEditor = div.getAttribute( 'editorMax' ) !== null;
-
-      console.log( showEditor, maxEditor );
-      if ( showEditor ) {
-        iframeCont.classList.add( 'show' );
-        if ( maxEditor ) {
-          iframeCont.classList.add( 'editorMax' );
-        } else {
-          iframeCont.classList.remove( 'editorMax' );
-        }
-
-        /* on editor show if code exists render it
-        - code needs to be in an attribute since `code` tag cannot take inline HTML as inner text
-        it will need to be escaped which is not good for DX
-        */
-        const code = div.getAttribute( 'code' );
-        if ( code ) {
-          send( code );
-        }
-      } else {
-        iframeCont.classList.remove( 'show' );
-      }
-    } );
-  </script>
+  <script src="/demo.js"></script>
 </body>
 
 </html>
