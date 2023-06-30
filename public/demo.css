@@ -1,6 +1,6 @@
 body::before {
   content: url("/bbi.png");
-  transform: translate(-40%, 40%) scale(0.2);
+  transform: translate(-45%, 45%) scale(0.1);
   object-fit: contain;
   position: fixed;
   left: 10px;
@@ -45,6 +45,11 @@ section {
   z-index: 1;
 }
 
+h1 {
+  font-size: 3em !important;
+  margin: 0.5em 0 !important;
+}
+
 h2 {
   font-size: 1.5em !important;
 }
@@ -53,4 +58,9 @@ h2 {
 b,
 strong {
   font-weight: 700 !important;
+}
+
+img {
+  max-height: 50vh;
+  max-width: 80vw;
 }
