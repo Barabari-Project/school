@@ -6,6 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="icon" href="https://barabariproject.org/icons/barabari.png" />
+  <link rel="apple-touch-icon" href="https://barabariproject.org/icons/barabari.png" />
+
   <meta name="description" content="A REPL for School Students by The Barabari Project" />
   <meta name="author" content="The Barabari Project" />
 
@@ -18,7 +21,6 @@
   <meta name="twitter:image" content="https://school.barabariproject.org/icon.svg" />
 
   <link rel="stylesheet" href="https://manav.ch/atomic.css">
-
   <title>Barabari REPL | Richard Jr.</title>
 
   <style>
@@ -30,10 +32,34 @@
       overflow: auto;
       min-height: 100vh
     }
+
+
+    .cm-activeLine {
+      background: #eef4 !important;
+      border-radius: 5px;
+    }
+
+    .cm-line,
+    .cm-line *,
+    .cm-matchingBracket {
+      font-variant-ligatures: contextual;
+      font-family: "Fira Code";
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .cm-gutterElement {
+      font-family: "Fira Code";
+      font-size: 14px;
+    }
   </style>
-  <script type="module" src="/src/main.ts"></script>
+  <link rel="stylesheet" href="https://unpkg.com/firacode@6.2.0/distr/fira_code.css">
+
+  %sveltekit.head%
 </head>
 
-<body class="p0 m0"></body>
+<body class="p0 m0">
+  <main style="display: contents;">%sveltekit.body%</main>
+</body>
 
 </html>
