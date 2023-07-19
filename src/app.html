@@ -54,9 +54,12 @@
     }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/firacode@6.2.0/distr/fira_code.css">
-  <script type="module" src="/src/main.ts"></script>
+
+  %sveltekit.head%
 </head>
 
-<body class="p0 m0"></body>
+<body class="p0 m0">
+  <main style="display: contents;">%sveltekit.body%</main>
+</body>
 
 </html>
