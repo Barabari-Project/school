@@ -1,7 +1,7 @@
 <script lang="ts">
   import CodeMirror from "svelte-codemirror-editor";
   import { html } from "@codemirror/lang-html";
-  import Template from "./basic.html?raw";
+  import Template from "../templates/basic.html?raw";
   import { onMount } from "svelte";
 
   let //
