@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="/bbi.png" />
+  <link rel="apple-touch-icon" href="/bbi.png" />
+
+  <meta name="description" content="A REPL for School Students by The Barabari Project" />
+  <meta name="author" content="The Barabari Project" />
+
+  <meta property="og:title" content="Barabari REPL | Richard Jr." />
+  <meta property="og:description" content="A REPL for School Students by The Barabari Project" />
+  <meta property="og:image" content="https://school.barabariproject.org/icon.svg" />
+
+  <meta name="twitter:title" content="Barabari REPL | Richard Jr." />
+  <meta name="twitter:description" content="A REPL for School Students by The Barabari Project" />
+  <meta name="twitter:image" content="https://school.barabariproject.org/icon.svg" />
+
+  <link rel="stylesheet" href="https://manav.ch/atomic.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Barabari REPL | Richard Jr.</title>
+
+  <style>
+    .codemirror-wrapper {
+      overflow-y: hidden;
+    }
+
+    .cm-scroller {
+      overflow: auto;
+      min-height: 100vh
+    }
+
+
+    .cm-activeLine {
+      background: #eef4 !important;
+      border-radius: 5px;
+    }
+
+    .cm-line,
+    .cm-line *,
+    .cm-matchingBracket {
+      font-variant-ligatures: contextual;
+      font-family: "Fira Code";
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .cm-gutterElement {
+      font-family: "Fira Code";
+      font-size: 14px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/firacode@6.2.0/distr/fira_code.css">
+
+  
+		<link href="../_app/immutable/assets/3.a9fa31f3.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.71f41cac.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.7ac1c3d2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.88428fac.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.9a9643d7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.cf010ec4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.05114ea3.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.120e9088.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.838bf29d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/globals.7f7f1b26.js"><!-- HEAD_svelte-3ryy1u_START --><script src="/assets/drawSVG.js" data-svelte-h="svelte-b4qh87"></script><!-- HEAD_svelte-3ryy1u_END -->
+</head>
+
+<body class="p0 m0">
+  <main style="display: contents;">   <div class="content svelte-1wxrfc1" data-svelte-h="svelte-1sw7rp4"><div class="path svelte-1wxrfc1"><span class="one svelte-1wxrfc1">M 10,10</span> <span class="two svelte-1wxrfc1">L 30,30</span> <span class="three svelte-1wxrfc1">l 0,20</span> <span class="four svelte-1wxrfc1">h 20</span> <span class="five svelte-1wxrfc1">v -20</span> <span class="six svelte-1wxrfc1">C <span class="six-pink">50,10</span></span> <span class="six six-pink svelte-1wxrfc1">80,10</span> <span class="six svelte-1wxrfc1">80,30</span> <span class="seven svelte-1wxrfc1">S <span class="seven-pink">30,70</span></span> <span class="seven svelte-1wxrfc1">90,90</span> <div class="controls svelte-1wxrfc1"> <button class="next svelte-1wxrfc1">next</button></div></div> <div></div> <svg xml:space="preserve" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 100 100" class="svelte-1wxrfc1"><path id="path" stroke="black" d="M 10,10
+           L30,30
+           l0,20
+           h20
+           v-20
+           C50,10
+           80,10
+           80,30
+           S30,70
+           90,90" stroke-linecap="round" fill="none" class="svelte-1wxrfc1"></path><g class="gubbins"><line class="bezier svelte-1wxrfc1" x1="50" y1="30" x2="50" y2="10" stroke-dasharray="1,1" stroke="#ed27a5" stroke-width="0.3"></line><line class="bezier svelte-1wxrfc1" x1="80" y1="30" x2="80" y2="10" stroke-dasharray="1,1" stroke="#ed27a5" stroke-width="0.3"></line><line class="bezier2 svelte-1wxrfc1" x1="30" y1="70" x2="90" y2="90" stroke-dasharray="1,1" stroke="#ed27a5" stroke-width="0.3"></line><line class="bezier2 svelte-1wxrfc1" x1="80" y1="30" x2="80" y2="50" stroke-dasharray="1,1" stroke="lightgrey" stroke-width="0.3"></line><circle cx="10" cy="10" r="0.2"></circle><circle cx="10" cy="10" r="1" fill="teal" class="dot svelte-1wxrfc1" id="one"></circle><circle cx="20" cy="10" r=".2"></circle><circle cx="30" cy="10" r=".2"></circle><circle cx="40" cy="10" r=".2"></circle><circle cx="50" cy="10" r=".2"></circle><circle cx="50" cy="10" r=".75" fill="#ed27a5" class="dot svelte-1wxrfc1" id="six"></circle><circle cx="60" cy="10" r=".2"></circle><circle cx="70" cy="10" r=".2"></circle><circle cx="80" cy="10" r=".2"></circle><circle cx="80" cy="10" r=".75" fill="#ed27a5" class="dot svelte-1wxrfc1" id="seven"></circle><circle cx="90" cy="10" r=".2"></circle><circle cx="10" cy="20" r=".2"></circle><circle cx="20" cy="20" r=".2"></circle><circle cx="30" cy="20" r=".2"></circle><circle cx="40" cy="20" r=".2"></circle><circle cx="50" cy="20" r=".2"></circle><circle cx="60" cy="20" r=".2"></circle><circle cx="70" cy="20" r=".2"></circle><circle cx="80" cy="20" r=".2"></circle><circle cx="90" cy="20" r=".2"></circle><circle cx="10" cy="30" r=".2"></circle><circle cx="20" cy="30" r=".2"></circle><circle cx="30" cy="30" r=".2"></circle><circle cx="30" cy="30" r="1" fill="teal" class="dot svelte-1wxrfc1" id="two"></circle><circle cx="40" cy="30" r=".2"></circle><circle cx="50" cy="30" r=".2"></circle><circle cx="50" cy="30" r="1" fill="teal" class="dot svelte-1wxrfc1" id="five"></circle><circle cx="60" cy="30" r=".2"></circle><circle cx="70" cy="30" r=".2"></circle><circle cx="80" cy="30" r=".2"></circle><circle cx="80" cy="30" r="1" fill="teal" class="dot svelte-1wxrfc1" id="eight"></circle><circle cx="90" cy="30" r=".2"></circle><circle cx="10" cy="40" r=".2"></circle><circle cx="20" cy="40" r=".2"></circle><circle cx="30" cy="40" r=".2"></circle><circle cx="40" cy="40" r=".2"></circle><circle cx="50" cy="40" r=".2"></circle><circle cx="60" cy="40" r=".2"></circle><circle cx="70" cy="40" r=".2"></circle><circle cx="80" cy="40" r=".2"></circle><circle cx="90" cy="40" r=".2"></circle><circle cx="10" cy="50" r=".2"></circle><circle cx="20" cy="50" r=".2"></circle><circle cx="30" cy="50" r=".2"></circle><circle cx="30" cy="50" r="1" class="dot svelte-1wxrfc1" fill="teal" id="three"></circle><circle cx="40" cy="50" r=".2"></circle><circle cx="50" cy="50" r=".2"></circle><circle cx="50" cy="50" r="1" class="dot svelte-1wxrfc1" fill="teal" id="four"></circle><circle cx="60" cy="50" r=".2"></circle><circle cx="70" cy="50" r=".2"></circle><circle cx="80" cy="50" r=".2"></circle><circle cx="90" cy="50" r=".2"></circle><circle cx="10" cy="60" r=".2"></circle><circle cx="20" cy="60" r=".2"></circle><circle cx="30" cy="60" r=".2"></circle><circle cx="40" cy="60" r=".2"></circle><circle cx="50" cy="60" r=".2"></circle><circle cx="60" cy="60" r=".2"></circle><circle cx="70" cy="60" r=".2"></circle><circle cx="80" cy="60" r=".2"></circle><circle cx="90" cy="60" r=".2"></circle><circle cx="10" cy="70" r=".2"></circle><circle cx="20" cy="70" r=".2"></circle><circle cx="30" cy="70" r=".2"></circle><circle cx="30" cy="70" r=".75" fill="#ed27a5" class="dot svelte-1wxrfc1" id="nine"></circle><circle cx="40" cy="70" r=".2"></circle><circle cx="50" cy="70" r=".2"></circle><circle cx="60" cy="70" r=".2"></circle><circle cx="70" cy="70" r=".2"></circle><circle cx="80" cy="70" r=".2"></circle><circle cx="90" cy="70" r=".2"></circle><circle cx="10" cy="80" r=".2"></circle><circle cx="20" cy="80" r=".2"></circle><circle cx="30" cy="80" r=".2"></circle><circle cx="40" cy="80" r=".2"></circle><circle cx="50" cy="80" r=".2"></circle><circle cx="60" cy="80" r=".2"></circle><circle cx="70" cy="80" r=".2"></circle><circle cx="80" cy="80" r=".2"></circle><circle cx="90" cy="80" r=".2"></circle><circle cx="10" cy="90" r=".2"></circle><circle cx="20" cy="90" r=".2"></circle><circle cx="30" cy="90" r=".2"></circle><circle cx="40" cy="90" r=".2"></circle><circle cx="50" cy="90" r=".2"></circle><circle cx="60" cy="90" r=".2"></circle><circle cx="70" cy="90" r=".2"></circle><circle cx="80" cy="90" r=".2"></circle><circle cx="90" cy="90" r=".2"></circle><circle cx="90" cy="90" r="1" fill="teal" class="dot svelte-1wxrfc1" id="ten"></circle></g><g id="turtle" class="svelte-1wxrfc1"><circle cx="10" cy="10" r="1" fill="teal"></circle></g></svg> </div> 
+			
+			<script>
+				{
+					__sveltekit_ddhv05 = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.71f41cac.js"),
+						import("../_app/immutable/entry/app.9a9643d7.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</main>
+</body>
+
+</html>
