@@ -1,5 +1,6 @@
-const iframeCont = document.querySelector( 'iframe' );
-const iframe = iframeCont.contentWindow;
+if ( !iframeCont ) var iframeCont = document.querySelector( 'iframe' );
+
+let iframe = iframeCont.contentWindow;
 const addIds = document
   .querySelectorAll( 'section' )
   .forEach( ( section, index ) => {
