@@ -11,7 +11,6 @@ body::before {
 iframe {
   top: 50%;
   transform: translateY(-50%);
-  border: 3px solid #000;
   border-radius: 10px;
   z-index: 1000 !important;
 
