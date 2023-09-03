@@ -2,36 +2,102 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embedding Tester</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="https://manav.ch/atomic.css">
+  <link rel="icon" href="/bbi.png" />
+  <link rel="apple-touch-icon" href="/bbi.png" />
+
+  <meta name="description" content="A REPL for School Students by The Barabari Project" />
+  <meta name="author" content="The Barabari Project" />
+
+  <meta property="og:title" content="Barabari REPL | Richard Jr." />
+  <meta property="og:description" content="A REPL for School Students by The Barabari Project" />
+  <meta property="og:image" content="https://school.barabariproject.org/icon.svg" />
+
+  <meta name="twitter:title" content="Barabari REPL | Richard Jr." />
+  <meta name="twitter:description" content="A REPL for School Students by The Barabari Project" />
+  <meta name="twitter:image" content="https://school.barabariproject.org/icon.svg" />
+
+  <link rel="stylesheet" href="https://manav.ch/atomic.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Barabari REPL | Richard Jr.</title>
 
   <style>
-    iframe {
-      width: calc(100vw - 40px - 6px);
-      height: calc(100vh - 40px - 6px);
+    .codemirror-wrapper {
+      overflow-y: hidden;
+    }
+
+    .cm-scroller {
+      overflow: auto;
+      min-height: 100vh
+    }
+
+
+    .cm-activeLine {
+      background: #eef4 !important;
+      border-radius: 5px;
+    }
+
+    .cm-line,
+    .cm-line *,
+    .cm-matchingBracket {
+      font-variant-ligatures: contextual;
+      font-family: "Fira Code";
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .cm-gutterElement {
+      font-family: "Fira Code";
+      font-size: 14px;
     }
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/firacode@6.2.0/distr/fira_code.css">
+
+  
+		<link href="./_app/immutable/assets/5.e0de9885.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/toasts.7f291dcf.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.bda4555d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.35e2a1e6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.5a0b891f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.8f15a317.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.fa91c3b5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.cf010ec4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.c2a6e5b5.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.fa5a04bb.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.7c208484.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/each.e59479a4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/toasts.45318c18.js">
 </head>
 
-<body class="tc">
-  <h1>Embedding Test</h1>
-  <iframe class="m20 rx20" src="/" frameborder="0"></iframe>
+<body class="p0 m0">
+  <main style="display: contents;">   <main class="f fw svelte-1x49bxk"><div class="editor p-rel svelte-1x49bxk"><div class="scm-waiting  svelte-kcx0g9"><div class="scm-waiting__loading scm-loading svelte-kcx0g9" data-svelte-h="svelte-1pxusly"><div class="scm-loading__spinner svelte-kcx0g9"></div> <p class="scm-loading__text svelte-kcx0g9">Loading editor...</p></div> <pre class="scm-pre cm-editor svelte-kcx0g9"></pre></div></div> <iframe id="mfWHAT" frameborder="0" title="Editor Output" class="svelte-1x49bxk"></iframe></main> <div id="toaster" class="p-fix w-100 tc f-col svelte-1x49bxk"> </div> 
+			
+			<script>
+				{
+					__sveltekit_1kyll8d = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-  <script>
-    // message iframe
-    const iframe = document.querySelector( 'iframe' )
-    const content = iframe.contentWindow;
+					const element = document.currentScript.parentElement;
 
-    // post message frame
-    const code = `<html><h1> Embedded </h1></html>`;
+					const data = [null,null];
 
-    setTimeout( () => {
-      content.postMessage( { type: 'code', code }, '*' )
-    }, 1000 )
-  </script>
+					Promise.all([
+						import("./_app/immutable/entry/start.bda4555d.js"),
+						import("./_app/immutable/entry/app.fa91c3b5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</main>
 </body>
 
 </html>
